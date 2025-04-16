@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Trading Strategy Backtester",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "-mconsole",
+        "-Iinclude",
+        "-IUtils",
+        "main.cpp",
+        "src/Backtester.cpp",
+        "src/Candle.cpp",
+        "src/SMACrossoverStrategy.cpp",
+        "src/SMAIndicator.cpp",
+        "src/Strategy.cpp",
+        "src/Trade.cpp",
+        "Utils/CSVReader.cpp",
+        "-o",
+        "main.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
